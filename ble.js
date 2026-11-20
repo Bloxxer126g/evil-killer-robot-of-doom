@@ -1,8 +1,8 @@
 // ble.js
 // detect key presses and transmit them to the robot
 
-const SERVICE_UUID = '01-evil-killer-robot-of-doom-service'; // theese need to be the same as on tjhe esp32 or it wont connect
-const CHAR_UUID    = 'oa002-evil-killer-robot-of-doom-char'; // this too
+const SERVICE_UUID = 0xE001; // theese need to be the same as on tjhe esp32 or it wont connect
+const CHAR_UUID    = 0xE002; // this too
 
 let IsConnected = false
 let char = null
