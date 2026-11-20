@@ -60,7 +60,7 @@ document.onkeyup = function (e) {
 };
 
 setInterval(ev => {
-    document.getElementById("key").innerHTML = keyDown || " "
+    document.getElementById("key").innerHTML = keyDown || "_"
     if (IsConnected == true) { // cant send the message if it is not connected
         char.writeValueWithoutResponse(new TextEncoder().encode(keyDown || " ")) // send the message
             .catch(err => console.warn(err)); // incase something goes wrong
