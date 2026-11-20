@@ -17,12 +17,13 @@ document.getElementById('scan').onclick = async () => {
     char = await service.getCharacteristic(CHAR_UUID); // do all of the ble connection (this is copy-pasted from MDN docs)
     IsConnected = true
 
-    document.getElementById('status').textContent = 'connected to robot';
+    document.getElementById('status').textContent = 'paired with robot';
 }
 
 keyDown = ""
 
 document.onkeydown = function (e) {
+    console.log(e.keyCode)
     if (e.keyCode == 87) { // it looks like event.keycode is depricated but i dont know another method lol
         keyDown = "W"
     }
@@ -34,6 +35,9 @@ document.onkeydown = function (e) {
     }
     if (e.keyCode == 68) {
         keyDown = "D"
+    }
+    if (e.keyCode == 70) {
+        keyDown = "F"
     }
 };
 
@@ -48,6 +52,9 @@ document.onkeyup = function (e) {
         keyDown = ""
     }
     if (e.keyCode == 68 && keyDown == "D") {
+        keyDown = ""
+    }
+    if (e.keyCode == 70 && keyDown == "F") {
         keyDown = ""
     }
 };

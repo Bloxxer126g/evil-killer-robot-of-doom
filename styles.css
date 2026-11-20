@@ -27,4 +27,40 @@ button:hover {
     border: solid hsl(0, 0%, 0%) 3px;
 }
 
-/* some really basic styles i made in 2 minutes */
+/* cool keys */
+.KeyDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 6vh;
+    margin-bottom: 10px;
+}
+
+.Key {
+    display: flex;
+    padding: 10px;
+    font-size: 1.5vw;
+    font-family: "Cascadia Code", sans-serif;
+    background-color: rgb(0, 185, 46);
+    color: hsl(106, 100%, 9%);
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    border: solid hsl(106, 100%, 15%) 3px;
+    margin: 10px;
+}
+
+.Key-Hide {
+    display: flex;
+    padding: 2px;
+    font-size: 0.3vw;
+    font-family: "Cascadia Code", sans-serif;
+    background-color: rgba(0, 185, 46, 0);
+    color: hsla(106, 100%, 9%, 0);
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    border: solid hsla(106, 100%, 15%, 0) 3px;
+    margin: 10px;
+}
